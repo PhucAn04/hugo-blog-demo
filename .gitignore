@@ -416,3 +416,34 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# --- Custom Ignores for 4GO Project ---
+
+# Node & Frontend
+node_modules/
+cms/frontend/node_modules/
+cms/frontend/dist/
+npm-debug.log*
+
+# Wails
+cms/build/bin/
+cms/build/obj/
+
+# Hugo
+hugo-site/public/
+hugo-site/resources/_gen/
+hugo-site/.hugo_build.lock
+hugo-site/hugo_stats.json
+
+# Go & Executables
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# OS & IDE
+.DS_Store
+.idea/

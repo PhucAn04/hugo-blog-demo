@@ -1,0 +1,3 @@
+[submodule "hugo-site/themes/lotusdocs"]
+	path = hugo-site/themes/lotusdocs
+	url = https://github.com/colinwilson/lotusdocs

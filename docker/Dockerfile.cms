@@ -1,0 +1,21 @@
+FROM golang:1.23-bookworm
+
+# Install build dependencies for Wails (WebKit2GTK, GCC for CGO)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    nodejs npm git \
+    libgtk-3-dev \
+    libwebkit2gtk-4.0-dev \
+    build-essential \
+    pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY cms .
+
+# Build frontend
+RUN cd frontend && npm install && npm run build
+
+# Build Go binary with CGO enabled (required by Wails)
+RUN CGO_ENABLED=1 go build -tags desktop,production -o cms .
+
+CMD ["./cms"]
