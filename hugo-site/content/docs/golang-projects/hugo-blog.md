@@ -5,7 +5,7 @@ weight: 420
 draft: false
 ---
 
-# Xây dựng Blog với Hugo
+
 
 Trang web tài liệu 4GO mà bạn đang xem chính là một sản phẩm được tạo nên từ **Hugo** - Static Site Generator nhanh nhất thế giới, được viết hoàn toàn bằng Go!
 

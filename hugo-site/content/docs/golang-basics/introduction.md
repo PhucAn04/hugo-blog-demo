@@ -5,7 +5,7 @@ weight: 210
 draft: false
 ---
 
-# Golang là gì?
+
 
 **Go** (hay thường gọi là *Golang*) là một ngôn ngữ lập trình mã nguồn mở, được biên dịch (compiled), thiết kế bởi Google vào năm 2007 (chính thức ra mắt 2009).
 

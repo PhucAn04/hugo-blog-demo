@@ -5,7 +5,7 @@ weight: 220
 draft: false
 ---
 
-# Cài đặt Golang
+
 
 Để bắt đầu lập trình Go, bạn cần tải về công cụ biên dịch (Go Compiler) và thiết lập môi trường.
 

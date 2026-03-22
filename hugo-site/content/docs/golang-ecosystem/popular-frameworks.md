@@ -5,7 +5,7 @@ weight: 320
 draft: false
 ---
 
-# Go Web Frameworks
+
 
 Mặc dù thư viện chuẩn `net/http` của Go đủ mạnh để tạo ra một web server thực thụ, việc sử dụng các Framework giúp giảm thiểu mã lặp (boilerplate) và cung cấp các tính năng tiện ích (Routing, Middleware).
 

@@ -5,7 +5,7 @@ weight: 410
 draft: false
 ---
 
-# Xây dựng REST API với Gin
+
 
 Trong bài này, chúng ta sẽ tạo một API quản lý Sách (Books).
 

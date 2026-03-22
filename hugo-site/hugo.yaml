@@ -11,6 +11,8 @@ module:
 params:
   author: "4GO"
   description: "Blog học Golang"
+  docs:
+    darkMode: true
 
 menu:
   main:

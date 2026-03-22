@@ -6,7 +6,7 @@ draft: false
 icon: "article"
 ---
 
-# Cơ bản Golang
+## Lộ trình khởi đầu
 
 Phần này sẽ giúp bạn làm quen với ngôn ngữ lập trình **Go** (Golang), lịch sử ra đời, cũng như cách thiết lập môi trường lập trình trên máy tính của bạn.
 

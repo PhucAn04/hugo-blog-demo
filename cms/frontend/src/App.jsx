@@ -15,6 +15,7 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [currentArticle, setCurrentArticle] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+  const [theme, setTheme] = useState('dark');
   const textareaRef = useRef(null);
 
   // States for new section modal
@@ -24,6 +25,10 @@ function App() {
   useEffect(() => {
     loadData();
   }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const loadData = async () => {
     try {
@@ -194,6 +199,13 @@ function App() {
             placeholder="Nhập tiêu đề bài viết..."
           />
           <div className="topbar-actions">
+            <button 
+              className="btn btn-secondary" 
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              title="Chuyển đổi giao diện Sáng/Tối"
+            >
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
             {currentArticle.path && (
               <button className="btn btn-danger" onClick={handleDelete}>🗑️ Xóa</button>
             )}

@@ -6,7 +6,7 @@ draft: false
 icon: "build"
 ---
 
-# Dự án thực hành
+## Giới thiệu
 
 Học đi đôi với hành. Sau khi nắm được cơ bản và làm quen với hệ sinh thái, cách tốt nhất để thành thạo Go là bắt tay vào code các dự án thực tế.
 

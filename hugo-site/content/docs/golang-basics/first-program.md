@@ -5,7 +5,7 @@ weight: 230
 draft: false
 ---
 
-# Chương trình Go đầu tiên
+
 
 Hãy cùng nhau viết chương trình kinh điển "Hello World" trong Go.
 

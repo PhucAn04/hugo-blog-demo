@@ -6,7 +6,7 @@ draft: false
 icon: "hub"
 ---
 
-# Hệ sinh thái Golang
+## Giới thiệu chung
 
 Golang nổi tiếng với một thư viện chuẩn (Standard Library) cực kỳ mạnh mẽ. Tuy nhiên, để phát triển nhanh chóng các dự án lớn, cộng đồng open-source đã đóng góp rất nhiều Framework và Tools xuất sắc.
 

@@ -5,7 +5,7 @@ weight: 330
 draft: false
 ---
 
-# Database Tools trong Go
+
 
 Có hai trường phái chính khi làm việc với CSDL trong Go: Dùng **ORM (Object-Relational Mapping)** hoặc viết **SQL thuần**.
 
