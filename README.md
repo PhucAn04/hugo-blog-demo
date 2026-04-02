@@ -96,3 +96,24 @@ wails build
 2. Quản lý hệ thống bài đăng bằng cách tạo chuyên mục `(Chuyên mục - Section)` từ màn hình giao diện bên trái.
 3. Kích chuột vào "Bài viết mới", nhập các biến số cần thiết (như tags, thứ tự) bằng các ô nhập giao diện thay vì mở khóa `---` YAML phức tạp. Bấm các nút công cụ để viết văn bản. Khung Preview bên tay phải thay đổi lập tức thể hiện kết quả.
 4. Bấm **Lưu**, backend của Wails App ghi văn bản vào đúng logic cấu trúc. Framework Hugo "nghe" thấy sự thay đổi và sinh (render) lại cấu trúc cây của trang chủ trong vòng dưới 20ms.
+
+---
+
+## 📂 Chi tiết Cấu trúc Thư mục
+
+### 1. `hugo-site/` (Mã nguồn Web Tĩnh Hugo)
+Đây là thư mục chứa cấu hình và dữ liệu gốc gốc để xây dựng trang web.
+- **`content/`**: Nơi lưu trữ toàn bộ nội dung dưới dạng Markdown (các bài học nằm ở `content/docs/`).
+- **`static/`**: Chứa các tệp tĩnh nguyên bản (hình ảnh, favicon, các override CSS nội bộ). Các tệp này sẽ được chép trực tiếp mà không qua biên dịch.
+- **`themes/`** & **`layouts/`**: Quy định giao diện hiển thị cho website. Trong đó `layouts` đã được override bằng các đoạn partial (`head`, `header`, `footer`, `sidebar`) giúp tối ưu hiệu suất và dọn dẹp các Inline CSS cứng ra khỏi module gốc `lotusdocs`.
+- **`hugo.yaml`**: Tập tin khai báo cấu hình chính của toàn bộ trang web.
+- **`public/` (Thư mục tĩnh đã render)**: Thư mục cốt lõi được Hugo tự động sinh ra sau khi biên dịch. Chứa toàn bộ website dưới dạng HTML/CSS/JS tĩnh đã sẵn sàng để đẩy lên hosting/server.
+  - Phân tích `public/`: Chứa các trang đã biên dịch như `index.html` (trang chủ), `404.html` (trang lỗi), `sitemap.xml` (SEO), các thư mục phân cấp tuyến tính (như `docs/`, `categories/`, `tags/` chứa các tệp `.html` tương ứng của từng thẻ/chuyên mục) cùng tập hợp các tệp icon, js và images hiển thị.
+
+### 2. `cms/` (Ứng dụng Wails Desktop - 4GO CMS)
+Sử dụng kiến trúc của Wails v2 để giao tiếp giữa Web Frontend và Native Go Backend:
+- **`main.go`**: Điểm khởi động ứng dụng Desktop, định nghĩa cửa sổ (kích thước, tiêu đề) và gắn kết (bind) các hàm Go.
+- **`app.go`**: Chứa logic Backend cốt lõi viết bằng Go (thao tác file hệ thống, parse YAML Front Matter, lưu nội dung Markdown, giao tiếp trực tiếp với thư mục `hugo-site/content`).
+- **`frontend/`**: Chứa mã nguồn dự án SPA React/Vite đóng vai trò là giao diện người dùng (UI) quản trị CMS.
+- **`wails.json`**: Cấu hình cấu trúc dự án của Wails.
+- **`build/`**: Nơi chứa các tệp như icon hệ thống và thư mục `bin/` chứa file thực thi (.exe, .app) sinh ra sau khi chạy `wails build`.

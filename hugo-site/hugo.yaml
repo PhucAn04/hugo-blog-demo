@@ -1,7 +1,7 @@
 baseURL: http://localhost:1313
 title: "4GO Blog"
 
-theme: lotusdocs
+
 languageCode: "vi"
 
 module:
@@ -13,6 +13,7 @@ params:
   description: "Blog học Golang"
   docs:
     darkMode: true
+    breadcrumbs: false
 
 menu:
   main:

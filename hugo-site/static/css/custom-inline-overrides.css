@@ -1,0 +1,11 @@
+.custom-sidebar-height {
+    height: calc(100% - 131px) !important;
+}
+
+.custom-logo-fill {
+    fill: #06f !important;
+}
+
+.custom-back-to-top {
+    fill: #fff !important;
+}
